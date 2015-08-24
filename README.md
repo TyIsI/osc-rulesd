@@ -9,6 +9,11 @@ This project provides a locally hosted "brain" to OSC implementations.
 
 It does so by providing a daemon that matches messages to its configured rules and sends out control messages accordingly.
 
+Requirements
+------------
+- Python 3
+- Python-OSC (pip install python-osc)
+
 Configuration
 -------------
 
