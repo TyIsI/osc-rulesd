@@ -1,24 +1,18 @@
 {
-	"destinations": 
-	[
+	"destinations": [
 		{
 			"name": "lamp1",
 			"address": "127.0.0.1",
 			"port": 9999
 		}
 	],
-
-	"rules": 
-	[
+	"rules": [
 		{
-			"match": 
-			{
+			"match": {
 				"address": "/room1/lightswitch1",
 				"message": "off"
 			},
-
-			"push": 
-			[
+			"push": [
 				{
 					"destination": "lamp1",
 					"address": "/room1/lamp1",
@@ -26,16 +20,12 @@
 				}
 			]
 		},
-
 		{
-			"match": 
-			{
+			"match": {
 				"address": "/room1/lightswitch1",
 				"message": "on"
 			},
-
-			"push": 
-			[
+			"push": [
 				{
 					"destination": "lamp1",
 					"address": "/room1/lamp1",

@@ -64,9 +64,11 @@ if __name__ == "__main__":
     
     preload_destinations()
     
-    print( "Destinations:" )
-    print( format( destinations ) )
+    if DEBUG:
+        print( "Destinations:" )
+        print( destinations.keys() )
     
     server = socketserver.UDPServer( ( args.ip, args.port ), MyOSCHandler )
-    print("Serving on {}".format(server.server_address))
+    if DEBUG:
+        print("Serving on {}".format(server.server_address))
     server.serve_forever()
