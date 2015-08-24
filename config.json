@@ -1,0 +1,47 @@
+{
+	"destinations": 
+	[
+		{
+			"name": "lamp1",
+			"address": "127.0.0.1",
+			"port": 9999
+		}
+	],
+
+	"rules": 
+	[
+		{
+			"match": 
+			{
+				"address": "/room1/lightswitch1",
+				"message": "off"
+			},
+
+			"push": 
+			[
+				{
+					"destination": "lamp1",
+					"address": "/room1/lamp1",
+					"message": "off"
+				}
+			]
+		},
+
+		{
+			"match": 
+			{
+				"address": "/room1/lightswitch1",
+				"message": "on"
+			},
+
+			"push": 
+			[
+				{
+					"destination": "lamp1",
+					"address": "/room1/lamp1",
+					"message": "on"
+				}
+			]
+		}
+	]
+}
